@@ -203,7 +203,7 @@ metadata:
   name: $ACCOUNT_NAME-$ROLENAME-rolebinding
 subjects:
 - kind: User
-  name: system:serviceaccount:default:$ACCOUNT_NAME # default it is namaspase
+  name: system:serviceaccount:$NAMESPACE:$ACCOUNT_NAME # default it is namaspase
   apiGroup: rbac.authorization.k8s.io
 roleRef:
   kind: ClusterRole #this must be Role or ClusterRole
